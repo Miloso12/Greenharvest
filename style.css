@@ -1,0 +1,143 @@
+/* Reset default margins & paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Navigation bar */
+header {
+    background: #07e94b;
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.logo img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    padding: 100px 20px;
+}
+
+.hero .btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;  /* Centers items horizontally */
+    align-items: center;  /* Centers items vertically */
+    gap: 20px;  /* Adds space between boxes */
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+}
+
+.box {
+    background-color: rgb(0, 255, 72);
+    color: rgb(93, 12, 12);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Image Slider */
+.slider {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Scrolling Images */
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: #f4f4f4;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite alternate ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Image Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
